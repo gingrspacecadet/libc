@@ -6,5 +6,6 @@
 typedef const char *cstring;
 
 size cstring_length(cstring str);
+void cstring_append(cstring *dest, cstring src);
 
 #endif
