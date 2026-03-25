@@ -1,7 +1,7 @@
 #include <array.h>
 #include <io.h>
 
-ARRAY_DECLARE(char)
+INSTANTIATE(char, ARRAY_TEMPLATE)
 
 int main(void) {
     char_array arr = char_array_init();
