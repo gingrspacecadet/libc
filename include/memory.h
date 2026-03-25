@@ -3,6 +3,6 @@
 
 #include <types.h>
 
-void memcpy(char *dst, char *src, size len);
+void memcpy(void *dst, const void *src, size len);
 
 #endif

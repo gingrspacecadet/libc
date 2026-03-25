@@ -2,6 +2,8 @@
 #define __SYSCALL_H
 
 #define SYS_WRITE   1
+#define SYS_RT_SIGACTION    13
+#define SYS_SIGALTSTACK  131
 #define STDOUT      1
 
 static inline long __syscall(long n, long arg1, long arg2, long arg3, long arg4, long arg5, long arg6) {

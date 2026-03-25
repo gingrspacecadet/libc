@@ -27,7 +27,7 @@ static inline void N##_array##_free(N##_array *v) { \
     v->idx = v->cap = 0; \
 } \
 static inline T N##_array##_at(N##_array *v, size idx) { \
-    return v->data[idx > v->cap ? (v->cap - 1) : idx]; \
+    return v->data[idx >= v->idx ? (v->cap - 1) : idx]; \
 } \
 static inline void N##_array##_resize(N##_array *v, size elems) { \
     if (elems < v->cap) return; \

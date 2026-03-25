@@ -2,7 +2,7 @@ CC        := gcc
 NASM      := nasm
 
 CFLAGS    := -O0 -g3 \
-             -ffreestanding -fno-builtin -fno-stack-protector -nostdinc \
+             -ffreestanding -fno-builtin -fno-stack-protector -fno-omit-frame-pointer -nostdinc \
              -Iinclude \
              -Wall -Wextra -Wpedantic -Wconversion -Wdouble-promotion \
              -Wno-unused-parameter -Wno-unused-function -Wno-sign-conversion \
@@ -17,10 +17,10 @@ SRC_DIR   := src
 TEST_DIR  := test
 
 SRC_C   := $(shell find $(SRC_DIR) -type f -name '*.c')
-SRC_ASM := $(shell find $(SRC_DIR) -type f -name '*.asm')
+SRC_ASM := $(shell find $(SRC_DIR) -type f -name '*.s')
 
 OBJ_C   := $(patsubst $(SRC_DIR)/%.c,$(BUILD_DIR)/%.o,$(SRC_C))
-OBJ_ASM := $(patsubst $(SRC_DIR)/%.asm,$(BUILD_DIR)/%.o,$(SRC_ASM))
+OBJ_ASM := $(patsubst $(SRC_DIR)/%.s,$(BUILD_DIR)/%.o,$(SRC_ASM))
 OBJ_ALL := $(OBJ_C) $(OBJ_ASM)
 
 DEPS := $(OBJ_C:.o=.d)

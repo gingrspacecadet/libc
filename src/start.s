@@ -1,5 +1,7 @@
 global _start
 extern main
+extern setup_alt_stack
+extern setup_signal_handlers
 
 section .text
 _start:
@@ -7,6 +9,9 @@ _start:
     mov rdi, [rsp]
     mov rsi, [rsp + 8]
     and rsp, -16
+
+    call setup_alt_stack
+    call setup_signal_handlers
     
     call main
     
