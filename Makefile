@@ -29,7 +29,7 @@ START_SRC := $(SRC_DIR)/start.s
 START_OBJ := $(BUILD_DIR)/start.o
 
 LIBDIR  := $(BUILD_DIR)/lib
-LIBNAME := atlibc.a
+LIBNAME := libc.a
 LIB     := $(LIBDIR)/$(LIBNAME)
 
 TEST_SRCS := $(wildcard $(TEST_DIR)/*.c)
