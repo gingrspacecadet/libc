@@ -1,9 +1,11 @@
 #ifndef __STRING_H
 #define __STRING_H
 
+#include <types.h>
+
 typedef struct {
     char *data;
-    unsigned long length;
+    size length;
 } string;
 
 #endif
