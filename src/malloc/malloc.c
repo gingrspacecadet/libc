@@ -1,3 +1,4 @@
+#include <memory.h>
 #include "internal.h"
 
 void *malloc(size len) {
@@ -15,4 +16,10 @@ void *malloc(size len) {
     __malloc_split(header, aligned_len);
 
     return (void*)((char*)header + HEADER_SIZE);
+}
+
+void *calloc(size len) {
+    void *ptr = malloc(len);
+    if (ptr) memset(ptr, 0, len);
+    return ptr;
 }

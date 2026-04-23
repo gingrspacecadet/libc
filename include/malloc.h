@@ -4,6 +4,7 @@
 #include <types.h>
 
 void *malloc(size len);
+void *calloc(size len);
 void free(void *ptr);
 void *realloc(void *ptr, size len);
 
