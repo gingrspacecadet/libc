@@ -1,4 +1,4 @@
-#include <lib.h>
+#include <sys.h>
 #include <syscall.h>
 #include <atexit.h>
 

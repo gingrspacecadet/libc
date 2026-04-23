@@ -25,8 +25,8 @@ OBJ_ALL := $(OBJ_C) $(OBJ_ASM)
 
 DEPS := $(OBJ_C:.o=.d)
 
-START_SRC := $(SRC_DIR)/start.s
-START_OBJ := $(BUILD_DIR)/start.o
+START_SRC := $(SRC_DIR)/runtime/start.s
+START_OBJ := $(BUILD_DIR)/runtime/start.o
 
 LIBDIR  := $(BUILD_DIR)/lib
 LIBNAME := libc.a
