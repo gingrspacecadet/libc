@@ -1,8 +1,7 @@
 #include <chartype.h>
 
 bool isdigit(char c) {
-    if (c >= '0' && c <= '9') return true;
-    else return false;
+    return c >= '0' && c <= '9';
 }
 
 bool isspace(char c) {
@@ -18,8 +17,7 @@ bool isspace(char c) {
 }
 
 bool isalpha(char c) {
-    if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z')) return true;
-    else return false;
+    return (c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z');
 }
 
 bool isalnum(char c) {
